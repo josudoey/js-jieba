@@ -2,3 +2,5 @@ node_modules
 cppjieba
 dist
 .vscode
+.cache
+package-lock.json
