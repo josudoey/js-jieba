@@ -1,0 +1,4 @@
+node_modules
+cppjieba
+dist
+.vscode

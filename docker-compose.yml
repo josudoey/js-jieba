@@ -1,0 +1,17 @@
+version: "3.4"
+
+x-common-build: &common-build
+  image: jieba-builder:latest
+  build:
+    context: .
+  working_dir: /src
+  volumes:
+    - .:/src
+
+services:
+  sh:
+    <<: *common-build
+    command: ["bash"]
+  build:
+    <<: *common-build
+    command: ["make", "build"]
