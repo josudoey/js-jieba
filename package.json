@@ -14,6 +14,26 @@
     "url": "git+https://github.com/josudoey/js-jieba.git"
   },
   "author": "Joey Fang",
+  "keywords": [
+    "analyzer",
+    "chinese",
+    "chinese segmentation",
+    "dict",
+    "javascript",
+    "jieba",
+    "optimizer",
+    "pure",
+    "pure javascript",
+    "segment",
+    "segmentation",
+    "split",
+    "tokenizer",
+    "trie",
+    "word",
+    "中文",
+    "中文斷詞",
+    "斷詞"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/josudoey/js-jieba/issues"
