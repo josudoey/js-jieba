@@ -1,5 +1,7 @@
 # js-jieba
 
+[![Build Status](https://travis-ci.org/josudoey/js-jieba.svg?branch=master)](https://travis-ci.org/josudoey/js-jieba)
+
 js-jieba是以cppjieba透過emscripten編譯而成的函式庫，用於中文斷詞使用
 
 ### Demo
