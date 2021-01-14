@@ -1,12 +1,6 @@
 # js-jieba
 
-JsJieba是(結巴Jieba)中文斷詞的純JS版本
-
-### 編譯方式
-
-```sh
-docker-compose run --rm build
-```
+js-jieba是以cppjieba透過emscripten編譯而成的函式庫，用於中文斷詞使用
 
 ### Demo
 
@@ -42,3 +36,16 @@ node ./example/demo.js
 我是拖拉机学院手扶拖拉机专业的。不用多久，我就会升职加薪，当上CEO，走上人生巅峰。
 [{"word":"CEO","offsets":[93],"weight":11.739204307083542},{"word":"升职","offsets":[72],"weight":10.8561552143},{"word":"加薪","offsets":[78],"weight":10.642581114},{"word":"手扶拖拉机","offsets":[21],"weight":10.0088573539},{"word":"巅峰","offsets":[111],"weight":9.49395840471}]
 ```
+
+線上展示 [demo](https://rawcdn.githack.com/josudoey/js-jieba-demo/6fb6687c1fce672d34fb9645882594d7bf5d20a4/dist/index.html)
+
+### 編譯方式
+
+```sh
+docker-compose run --rm build
+```
+
+## 相關資源
+ - https://github.com/yanyiwu/cppjieba
+ - https://emscripten.org/docs/introducing_emscripten/index.html
+ - https://hub.docker.com/r/trzeci/emscripten/
