@@ -1,4 +1,3 @@
-export RUN:=umask 0022;
 export NODE_OPTIONS=--max-old-space-size=4096
 
 .PHONY: build
