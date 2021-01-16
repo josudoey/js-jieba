@@ -35,7 +35,7 @@ dist/jieba.emcc.js: cppjieba dist
 dist:
 	mkdir -p dist
 
-node_modules: node_modules
+node_modules:
 	npm i
 
 cppjieba:
