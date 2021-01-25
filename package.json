@@ -1,6 +1,6 @@
 {
   "name": "js-jieba",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "for js jieba lib",
   "main": "dist/jieba.js",
   "directories": {},
@@ -39,7 +39,7 @@
   "bugs": {
     "url": "https://github.com/josudoey/js-jieba/issues"
   },
-  "homepage": "https://github.com/josudoey/js-jiebar#readme",
+  "homepage": "https://github.com/josudoey/js-jieba#readme",
   "dependencies": {
     "raw-loader": "^4.0.2",
     "webpack": "^5.13.0",
