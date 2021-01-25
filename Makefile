@@ -1,7 +1,6 @@
 export NODE_OPTIONS=--max-old-space-size=4096
-
 .PHONY: build
-build: dist/jieba.js dist/jieba.emcc.js dist/dict.js
+build: dist/jieba.js dist/jieba.emcc.js dist/dict.zh-tw.js dist/dict.zh-cn.js
 
 .PHONY: clean
 clean:
@@ -10,7 +9,10 @@ clean:
 dist/jieba.js: dist/jieba.emcc.js node_modules
 	npm run build:jieba
 
-dist/dict.js: cppjieba node_modules
+dist/dict.zh-tw.js: jieba-tw/hmm_model.txt node_modules
+	npm run build:dict:zh-tw
+
+dist/dict.zh-cn.js: cppjieba node_modules
 	npm run build:dict:zh-cn
 
 dist/jieba.emcc.js: cppjieba dist
@@ -39,4 +41,10 @@ node_modules:
 	npm i
 
 cppjieba:
-	git clone --depth=10 --branch=master git://github.com/yanyiwu/cppjieba.git cppjieba
+	git clone --depth=2 --branch=master https://github.com/yanyiwu/cppjieba.git cppjieba
+
+jieba-tw/hmm_model.txt: jieba-tw
+	./webpack/dict/zh-tw/make_hmm.py > jieba-tw/hmm_model.txt
+
+jieba-tw:
+	git clone --depth=2 https://github.com/APCLab/jieba-tw.git jieba-tw 

@@ -1,12 +1,13 @@
 {
   "name": "js-jieba",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "for js jieba lib",
   "main": "dist/jieba.js",
   "directories": {},
   "scripts": {
     "build:jieba": "NODE_ENV=production webpack --config webpack/jieba",
     "build:dict:zh-cn": "NODE_ENV=production webpack --config webpack/dict/zh-cn",
+    "build:dict:zh-tw": "NODE_ENV=production webpack --config webpack/dict/zh-tw",
     "test": "jest"
   },
   "repository": {
