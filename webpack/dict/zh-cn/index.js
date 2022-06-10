@@ -19,9 +19,7 @@ module.exports = {
   module: {
     rules: [{
       test: /\.utf8$/,
-      loader: 'raw-loader',
-      options: {
-      }
+      type: 'asset/source'
     }]
   }
 }

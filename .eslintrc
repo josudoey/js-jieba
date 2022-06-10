@@ -1,7 +1,6 @@
 {
-  "extends": "standard",
-  "parser": "babel-eslint",
+  "extends": "eslint-config-standard-with-typescript",
   "parserOptions": {
-    "allowImportExportEverywhere": true
+    "project": "./tsconfig.json"
   }
 }

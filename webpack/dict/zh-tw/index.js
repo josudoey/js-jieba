@@ -19,9 +19,7 @@ module.exports = {
   module: {
     rules: [{
       test: /\.txt$/,
-      loader: 'raw-loader',
-      options: {
-      }
+      type: 'asset/source'
     }]
   }
 }
