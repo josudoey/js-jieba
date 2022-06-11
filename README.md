@@ -17,7 +17,7 @@ npm install js-jieba
 const createJieba = require('js-jieba/dist/jieba')
 const {
   JiebaDict, HMMModel, UserDict, IDF, StopWords
-} = require('../dist/dict.zh-tw')
+} = require('js-jieba/dist/dict.zh-tw.js')
 
 const jieba = createJieba(
   Buffer.from(JiebaDict),
