@@ -1,6 +1,6 @@
 {
   "name": "js-jieba",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "for js jieba lib",
   "main": "dist/jieba.js",
   "module": "esm.mjs",
@@ -65,8 +65,8 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.0.0",
     "jest": "^28.1.0",
-    "jieba-zh-cn": "workspace:^1.0.7",
-    "jieba-zh-tw": "workspace:^1.0.7",
+    "jieba-zh-cn": "workspace:^1.0.8",
+    "jieba-zh-tw": "workspace:^1.0.8",
     "ts-jest": "^28.0.3",
     "ts-loader": "^9.3.0",
     "ts-node": "^10.8.0",
