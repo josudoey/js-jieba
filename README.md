@@ -5,11 +5,33 @@
 js-jieba是以cppjieba透過emscripten編譯而成的函式庫，用於中文斷詞使用
 
 
-### es6 example usage
+## Installation
+```
+npm install js-jieba
+```
+
+## Quick Start
 
 ```
-import createJieba from "js-jieba";
+// CommonJS (.cjs)
+const createJieba = require('../dist/jieba')
+const {
+  JiebaDict, HMMModel, UserDict, IDF, StopWords
+} = require('../dist/dict.zh-tw')
+
+const jieba = createJieba(
+  Buffer.from(JiebaDict),
+  Buffer.from(HMMModel),
+  Buffer.from(UserDict),
+  Buffer.from(IDF),
+  Buffer.from(StopWords)
+)
+```
+
+```
+// ECMAScript (.mjs)
 import { createRequire } from 'module'
+import createJieba from 'js-jieba'
 const {
     JiebaDict, HMMModel, UserDict, IDF, StopWords
 } = createRequire(import.meta.url)('js-jieba/dist/dict.zh-tw.js')
@@ -24,7 +46,34 @@ const jieba = createJieba(
 )
 ```
 
-### Demo
+```
+// TypeScript (.ts)
+import createJieba from "js-jieba"
+import {
+  JiebaDict, HMMModel, UserDict, IDF, StopWords
+} from '../dist/dict.zh-tw'
+
+const jieba = Jieba(
+  Buffer.from(JiebaDict),
+  Buffer.from(HMMModel),
+  Buffer.from(UserDict),
+  Buffer.from(IDF),
+  Buffer.from(StopWords)
+)
+```
+
+## jieba method
+
+### cut(sentence: string, useHMM?: boolean): string[]
+### cutAll(sentence: string): string[]
+### cutForSearch(sentence: string, useHMM?: boolean): string[]
+### cutForSearchWithOffset(sentence: string, useHMM?: boolean): Word[]
+### insertUserWord(word: string): void
+### tag(sentence: string): string[]
+### extract(sentence: string, topk: number): Keyword[]
+### lookupTag(sentence: string): string
+
+## Demo
 ```
 node ./example/demo-tw.js
 ```
@@ -93,7 +142,7 @@ node ./example/demo.js
 
 線上展示 [demo](https://rawcdn.githack.com/josudoey/js-jieba-demo/6fb6687c1fce672d34fb9645882594d7bf5d20a4/dist/index.html)
 
-### 編譯方式
+## 編譯方式
 
 ```sh
 docker-compose run --rm build
