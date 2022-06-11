@@ -1,13 +1,13 @@
 {
   "name": "js-jieba",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "for js jieba lib",
   "main": "dist/jieba.js",
   "module": "esm.mjs",
   "files": [
     "index.js",
     "esm.mjs",
-    "dist/*.js",
+    "dist/*.(js|ts)",
     "types/*.d.ts"
   ],
   "directories": {},

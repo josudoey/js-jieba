@@ -12,9 +12,9 @@ npm install js-jieba
 
 ## Quick Start
 
-```
+```cjs
 // CommonJS (.cjs)
-const createJieba = require('../dist/jieba')
+const createJieba = require('js-jieba/dist/jieba')
 const {
   JiebaDict, HMMModel, UserDict, IDF, StopWords
 } = require('../dist/dict.zh-tw')
@@ -28,7 +28,7 @@ const jieba = createJieba(
 )
 ```
 
-```
+```mjs
 // ECMAScript (.mjs)
 import { createRequire } from 'module'
 import createJieba from 'js-jieba'
@@ -46,12 +46,12 @@ const jieba = createJieba(
 )
 ```
 
-```
+```ts
 // TypeScript (.ts)
-import createJieba from "js-jieba"
+import createJieba from 'js-jieba'
 import {
   JiebaDict, HMMModel, UserDict, IDF, StopWords
-} from '../dist/dict.zh-tw'
+} from 'js-jieba/dist/dict.zh-tw'
 
 const jieba = Jieba(
   Buffer.from(JiebaDict),
