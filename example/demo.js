@@ -1,7 +1,7 @@
-const Jieba = require('../dist/jieba')
+const Jieba = require('../')
 const {
   JiebaDict, HMMModel, UserDict, IDF, StopWords
-} = require('../dist/dict.zh-cn')
+} = require('jieba-zh-cn')
 
 const jieba = Jieba(
   Buffer.from(JiebaDict),

@@ -1,5 +1,5 @@
 import assert from 'assert'
-import createJieba from '../dist/jieba'
+import createJieba from '../'
 
 describe('jieba', () => {
   const jieba = createJieba()

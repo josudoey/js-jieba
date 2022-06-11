@@ -1,0 +1,5 @@
+export { JiebaDict } from './lib/jieba.dict.js'
+export { HMMModel } from './lib/hmm.model.js'
+export { UserDict } from './lib/user.dict.js'
+export { IDF } from './lib/idf.js'
+export { StopWords } from './lib/stop.words.js'

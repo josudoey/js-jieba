@@ -1,13 +1,12 @@
 import assert from 'assert'
-import createJieba from '../dist/jieba'
+import createJieba from '../'
 import {
   JiebaDict,
   HMMModel,
   UserDict,
   IDF,
   StopWords
-} from '../dist/dict.zh-cn'
-
+} from 'jieba-zh-cn'
 
 describe('jieba.zh.cn', () => {
   const jieba = createJieba(
