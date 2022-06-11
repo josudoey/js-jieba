@@ -4,6 +4,26 @@
 
 js-jieba是以cppjieba透過emscripten編譯而成的函式庫，用於中文斷詞使用
 
+
+### es6 example usage
+
+```
+import createJieba from "js-jieba";
+import { createRequire } from 'module'
+const {
+    JiebaDict, HMMModel, UserDict, IDF, StopWords
+} = createRequire(import.meta.url)('js-jieba/dist/dict.zh-tw.js')
+
+
+const jieba = createJieba(
+    Buffer.from(JiebaDict),
+    Buffer.from(HMMModel),
+    Buffer.from(UserDict),
+    Buffer.from(IDF),
+    Buffer.from(StopWords)
+)
+```
+
 ### Demo
 ```
 node ./example/demo-tw.js
