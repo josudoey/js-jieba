@@ -14,7 +14,7 @@ npm install js-jieba
 
 ```cjs
 // CommonJS (.cjs)
-const createJieba = require('js-jieba/dist/jieba')
+const createJieba = require('js-jieba')
 const {
   JiebaDict, HMMModel, UserDict, IDF, StopWords
 } = require('jieba-zh-tw')
@@ -26,6 +26,10 @@ const jieba = createJieba(
   IDF,
   StopWords
 )
+
+console.log(jieba.cut("結巴斷詞").join('/'))
+// Output:
+// 結巴/斷詞
 ```
 
 ```mjs
@@ -43,6 +47,10 @@ const jieba = createJieba(
   IDF,
   StopWords
 )
+
+console.log(jieba.cut("結巴斷詞").join('/'))
+// Output:
+// 結巴/斷詞
 ```
 
 ```ts
@@ -59,6 +67,10 @@ const jieba = Jieba(
   IDF,
   StopWords
 )
+
+console.log(jieba.cut("結巴斷詞").join('/'))
+// Output:
+// 結巴/斷詞
 ```
 
 ## jieba method
