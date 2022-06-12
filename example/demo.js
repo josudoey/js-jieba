@@ -1,14 +1,14 @@
-const Jieba = require('../')
+const Jieba = require('js-jieba')
 const {
   JiebaDict, HMMModel, UserDict, IDF, StopWords
 } = require('jieba-zh-cn')
 
 const jieba = Jieba(
-  Buffer.from(JiebaDict),
-  Buffer.from(HMMModel),
-  Buffer.from(UserDict),
-  Buffer.from(IDF),
-  Buffer.from(StopWords)
+  JiebaDict,
+  HMMModel,
+  UserDict,
+  IDF,
+  StopWords
 )
 
 let s = '他来到了网易杭研大厦'
