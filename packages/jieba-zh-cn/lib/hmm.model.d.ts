@@ -1,1 +1,1 @@
-export declare const HMMModel: Uint8Array;
+export declare const HMMModel: Uint8Array

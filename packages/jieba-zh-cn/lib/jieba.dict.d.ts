@@ -1,1 +1,1 @@
-export declare const JiebaDict: Uint8Array;
+export declare const JiebaDict: Uint8Array

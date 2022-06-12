@@ -11,22 +11,22 @@ interface Keyword {
 }
 
 interface Jieba {
-  cut(sentence: string, useHMM?: boolean): string[]
-  cutAll(sentence: string): string[]
-  cutForSearch(sentence: string, useHMM?: boolean): string[]
-  cutForSearchWithOffset(sentence: string, useHMM?: boolean): Word[]
-  insertUserWord(word: string): void
-  tag(sentence: string): string[]
-  extract(sentence: string, topk: number): Keyword[]
-  lookupTag(sentence: string): string
+  cut: (sentence: string, useHMM?: boolean) => string[]
+  cutAll: (sentence: string) => string[]
+  cutForSearch: (sentence: string, useHMM?: boolean) => string[]
+  cutForSearchWithOffset: (sentence: string, useHMM?: boolean) => Word[]
+  insertUserWord: (word: string) => void
+  tag: (sentence: string) => string[]
+  extract: (sentence: string, topk: number) => Keyword[]
+  lookupTag: (sentence: string) => string
 }
 
-declare function createJieba(
-  JiebaDict?: Buffer,
-  HMMModel?: Buffer,
-  UserDict?: Buffer,
-  IDF?: Buffer,
-  StopWords?: Buffer,
+declare function createJieba (
+  JiebaDict?: Buffer|Uint8Array,
+  HMMModel?: Buffer|Uint8Array,
+  UserDict?: Buffer|Uint8Array,
+  IDF?: Buffer|Uint8Array,
+  StopWords?: Buffer|Uint8Array,
 ): Jieba
 
 export { createJieba, Jieba }

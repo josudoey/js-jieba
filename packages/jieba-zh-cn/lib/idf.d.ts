@@ -1,1 +1,1 @@
-export declare const IDF: Uint8Array;
+export declare const IDF: Uint8Array
