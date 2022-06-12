@@ -32,16 +32,16 @@ const jieba = createJieba(
 // ECMAScript (.mjs)
 import createJieba from 'js-jieba'
 import {
-    JiebaDict, HMMModel, UserDict, IDF, StopWords
+  JiebaDict, HMMModel, UserDict, IDF, StopWords
 } from 'jieba-zh-tw'
 
 
 const jieba = createJieba(
-    JiebaDict,
-    HMMModel,
-    UserDict,
-    IDF,
-    StopWords
+  JiebaDict,
+  HMMModel,
+  UserDict,
+  IDF,
+  StopWords
 )
 ```
 
