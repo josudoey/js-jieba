@@ -20,11 +20,11 @@ const {
 } = require('jieba-zh-tw')
 
 const jieba = createJieba(
-  Buffer.from(JiebaDict),
-  Buffer.from(HMMModel),
-  Buffer.from(UserDict),
-  Buffer.from(IDF),
-  Buffer.from(StopWords)
+  JiebaDict,
+  HMMModel,
+  UserDict,
+  IDF,
+  StopWords
 )
 ```
 
@@ -37,11 +37,11 @@ import {
 
 
 const jieba = createJieba(
-    Buffer.from(JiebaDict),
-    Buffer.from(HMMModel),
-    Buffer.from(UserDict),
-    Buffer.from(IDF),
-    Buffer.from(StopWords)
+    JiebaDict,
+    HMMModel,
+    UserDict,
+    IDF,
+    StopWords
 )
 ```
 
@@ -53,11 +53,11 @@ import {
 } from 'jieba-zh-tw'
 
 const jieba = Jieba(
-  Buffer.from(JiebaDict),
-  Buffer.from(HMMModel),
-  Buffer.from(UserDict),
-  Buffer.from(IDF),
-  Buffer.from(StopWords)
+  JiebaDict,
+  HMMModel,
+  UserDict,
+  IDF,
+  StopWords
 )
 ```
 
@@ -139,7 +139,7 @@ node ./example/demo.js
 [{"word":"CEO","offsets":[93],"weight":11.739204307083542},{"word":"升职","offsets":[72],"weight":10.8561552143},{"word":"加薪","offsets":[78],"weight":10.642581114},{"word":"手扶拖拉机","offsets":[21],"weight":10.0088573539},{"word":"巅峰","offsets":[111],"weight":9.49395840471}]
 ```
 
-線上展示 [demo](https://rawcdn.githack.com/josudoey/js-jieba-demo/6fb6687c1fce672d34fb9645882594d7bf5d20a4/dist/index.html)
+線上展示 [demo](https://josudoey.github.io/js-jieba/)
 
 ## 編譯方式
 
