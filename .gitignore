@@ -1,7 +1,6 @@
 node_modules
 jieba-tw
 cppjieba
-dist
 .vscode
 .cache
 package-lock.json
