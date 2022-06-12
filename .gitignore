@@ -5,3 +5,4 @@ dist
 .vscode
 .cache
 package-lock.json
+pnpm-lock.yaml
