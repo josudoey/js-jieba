@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="<%= htmlWebpackPlugin.options.lang %>">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <title><%= htmlWebpackPlugin.options.title %></title><%
+
+    if (htmlWebpackPlugin.files.favicon) { %>
+    <link href="<%= htmlWebpackPlugin.files.favicon %>" rel="shortcut icon" /><%
+    } %><%
+    for (item of htmlWebpackPlugin.options.links) { %><%
+      if (typeof item === 'string' || item instanceof String) { item = { href: item, rel: 'stylesheet' } } %>
+    <link<% for (key in item) { %> <%= key %>="<%= item[key] %>"<% } %> /><%
+    } %><%
+
+    for (key in htmlWebpackPlugin.files.css) { %><%
+      if (htmlWebpackPlugin.files.cssIntegrity) { %>
+    <link
+      href="<%= htmlWebpackPlugin.files.css[key] %>"
+      rel="stylesheet"
+      integrity="<%= htmlWebpackPlugin.files.cssIntegrity[key] %>"
+      crossorigin="<%= webpackConfig.output.crossOriginLoading %>" /><%
+      } else { %>
+    <link href="<%= htmlWebpackPlugin.files.css[key] %>" rel="stylesheet" /><%
+      } %><%
+    } %><%
+    if (htmlWebpackPlugin.options.headHtmlSnippet) { %>
+    <%= htmlWebpackPlugin.options.headHtmlSnippet %><%
+    } %>
+  </head>
+  <body><%
+
+    if (htmlWebpackPlugin.options.bodyHtmlSnippet) { %>
+    <%= htmlWebpackPlugin.options.bodyHtmlSnippet %><%
+    } %><%
+
+    if (htmlWebpackPlugin.options.appMountId) { %>
+    <div id="<%= htmlWebpackPlugin.options.appMountId %>"><%
+      if (htmlWebpackPlugin.options.appMountHtmlSnippet) { %>
+    <%= htmlWebpackPlugin.options.appMountHtmlSnippet %><%
+      } %>
+    </div><%
+    } %><%
+
+    if (htmlWebpackPlugin.options.devServer) { %>
+    <script src="<%= htmlWebpackPlugin.options.devServer %>/webpack-dev-server.js" type="text/javascript"></script><%
+    } %>
+  </body>
+</html>
