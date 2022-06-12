@@ -1,6 +1,6 @@
 {
   "name": "js-jieba",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "for js jieba lib",
   "main": "dist/jieba.js",
   "module": "esm.mjs",

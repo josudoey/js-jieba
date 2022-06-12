@@ -1,6 +1,6 @@
 {
   "name": "jieba-zh-cn",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "jieba dict for zh-cn",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
