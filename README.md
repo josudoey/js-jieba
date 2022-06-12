@@ -119,7 +119,7 @@ node ./example/demo-tw.js
 
 
 ```
-node ./example/demo.js
+node ./example/demo-cn.js
 ```
 
 輸出:
