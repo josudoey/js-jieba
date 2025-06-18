@@ -20,6 +20,7 @@
     "build:zh-tw": "make zh-cn",
     "build:types": "tsc -p tsconfig.types.json",
     "build:web": "npm -C ./packages/web-demo run build",
+    "deploy:web": "npm -C ./packages/web-demo run deploy",
     "bump-version": "node scripts/bump-version.js",
     "test": "jest",
     "test-types": "tsd"

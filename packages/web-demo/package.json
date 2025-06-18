@@ -7,7 +7,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "react": "^19.0.0",
@@ -31,12 +32,13 @@
     "eslint-plugin-n": "^17.19.0",
     "eslint-plugin-prettier": "^5.4.1",
     "eslint-plugin-promise": "^7.2.1",
+    "gh-pages": "^4.0.0",
+    "jieba-zh-tw": "workspace:*",
+    "js-jieba": "workspace:*",
     "next": "15.3.3",
     "prettier-config-standard": "^7.0.0",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "typescript-eslint": "^8.34.0",
-    "jieba-zh-tw": "workspace:*",
-    "js-jieba": "workspace:*"
+    "typescript-eslint": "^8.34.0"
   }
 }
