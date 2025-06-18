@@ -11,8 +11,7 @@ const preId =
   (semver.prerelease(currentVersion) && semver.prerelease(currentVersion)[0])
 const packages = fs
   .readdirSync(path.resolve(__dirname, '../packages'))
-  .filter(p => !p.endsWith('.ts') && !p.startsWith('.'))
-
+  .filter((p) => !p.endsWith('.ts') && !p.startsWith('.'))
 
 const versionIncrements = [
   'patch',
@@ -21,9 +20,9 @@ const versionIncrements = [
   ...(preId ? ['prepatch', 'preminor', 'premajor', 'prerelease'] : [])
 ]
 
-const inc = i => semver.inc(currentVersion, i, preId)
-const getPkgRoot = pkg => path.resolve(__dirname, '../packages/' + pkg)
-const step = msg => console.log(chalk.cyan(msg))
+const inc = (i) => semver.inc(currentVersion, i, preId)
+const getPkgRoot = (pkg) => path.resolve(__dirname, '../packages/' + pkg)
+const step = (msg) => console.log(chalk.cyan(msg))
 
 async function main() {
   let targetVersion = args._[0]
@@ -34,7 +33,9 @@ async function main() {
       type: 'select',
       name: 'release',
       message: 'Select release type',
-      choices: versionIncrements.map(i => `${i} (${inc(i)})`).concat(['custom'])
+      choices: versionIncrements
+        .map((i) => `${i} (${inc(i)})`)
+        .concat(['custom'])
     })
 
     if (release === 'custom') {
@@ -74,7 +75,7 @@ function updateVersions(version) {
   // 1. update root package.json
   updatePackage(path.resolve(__dirname, '..'), version)
   // 2. update all packages
-  packages.forEach(p => updatePackage(getPkgRoot(p), version))
+  packages.forEach((p) => updatePackage(getPkgRoot(p), version))
 }
 
 function updatePackage(pkgRoot, version) {
@@ -89,7 +90,7 @@ function updatePackage(pkgRoot, version) {
 function updateDeps(pkg, depType, version) {
   const deps = pkg[depType]
   if (!deps) return
-  Object.keys(deps).forEach(dep => {
+  Object.keys(deps).forEach((dep) => {
     if (
       dep === 'vue' ||
       (dep.startsWith('@vue') && packages.includes(dep.replace(/^@vue\//, '')))
@@ -102,8 +103,7 @@ function updateDeps(pkg, depType, version) {
   })
 }
 
-
-main().catch(err => {
+main().catch((err) => {
   updateVersions(currentVersion)
   console.error(err)
 })
